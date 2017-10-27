@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <script src="/static/js/materialize.js"></script>
+    <script src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper bg-blueGrey">
+        <a href="#" class="brand-logo backToHome" id="imgTodo">
+                <img src="/static/img/todo3.png" alt="">
+        </a>
+
+        <a href="#" class="brand-logo center backToHome">Todo List</a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="encours" href="#"><i class="material-icons left">arrow_forward</i>Les projets en cours</a></li>
+            <li><a class="clos" href="#"><i class="material-icons left">arrow_forward</i>Les projets clôturés</a></li>
+        </ul>
+
+        <div class="recherche">
+            <div class="input-field hide-on-med-and-down">
+                <label class="label-icon white-text active" for="search">
+                    <i class="material-icons left" id="search-icon">search
+                </i>
+                </label>
+                <input class="validate" placeholder="Titre du projet recherché" id="search" type="text" required>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <h3>Ajouter un nouveau projet</h3>
+        <div class="s12 addTodo">
+            <form action="/" method="post">
+                <div id="erreur">
+                    <p>Tous les champs sont obligatoires !</p>
+                </div>
+                <div class="input-field">
+                    <label for="title">Titre:</label>
+                    <input class="champ" type="text" name="title" id="title">
+                </div>
+                <div class="input-field">
+                    <label for="body">Description:</label>
+                    <textarea class="champ truncate" name="body" id="body" cols="100" rows="10" ></textarea>
+                </div>
+                <div>
+                    <label for="iDTodo"></label>
+                    <input style="display: none" type="text" id="iDTodo">
+                </div>
+                <button id="btnAdd" class="btn-floating btn-large waves-effect waves-light  green lighten-1 "><i class="material-icons">add</i></button>
+            </form>
+        </div>
+
+    <hr class="hr">
+
+    <h3>Vos projets</h3>
+    <div class="row" id="result">
+        <!--liste des todos-->
+    </div>
+
+</div>
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Sandrine Day
+            <a class="grey-text text-lighten-4 right" href="#!">Link1</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

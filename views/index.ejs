@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <script src="/static/js/materialize.js"></script>
+    <script src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>index ejs</title>
+</head>
+<body>
+
+<div class="collection">
+    <% for (todo of datas){ %>
+    <a href="" class="collection-item">
+        <span class="badge"><%= todo.id %></span>
+        <h5><%= todo.title %></h5>
+        <p><%= todo.body %></p>
+        <div class="row right-align">
+            <button class="btn waves-effect" action="edit" data-id="<%= todo.id %>"><i class="material-icons">edit</i> </button>
+            <button class="btn waves-effect" action="delete" data-id="<%= todo.id %>"><i class="material-icons">delete</i> </button>
+            <button ></button>
+        </div>
+    </a>
+    <% } %>
+</div>
+
+</body>
+</html>

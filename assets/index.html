@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <script src="/static/js/materialize.js"></script>
+    <script src="/static/js/backtotop.js"></script>
+    <script src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <link rel="stylesheet" href="/static/css/backtotop.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo accueil" id="imgTodo">
+                <img src="/static/img/todo3.png" alt="">
+        </a>
+
+        <a href="#" class="brand-logo center">Todo List</a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="all" href="#"><i class="material-icons left">arrow_forward</i>Tous les projets</a></li>
+            <li><a class="done" href="#"><i class="material-icons left">arrow_forward</i>Les projets clôturés</a></li>
+        </ul>
+
+        <div class="recherche">
+            <div class="input-field hide-on-med-and-down">
+                <label class="label-icon white-text active" for="search">
+                    <i class="material-icons left" id="search-icon">search
+                </i>
+                </label>
+                <input  placeholder="Titre du projet recherché" id="search" type="text" required>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <h3>Ajouter un nouveau projet</h3>
+        <div class="s12 addTodo">
+            <form action="/" method="post">
+                <div id="erreur">
+                    <p>Ces champs sont obligatoires !</p>
+                </div>
+                <div class="row">
+                    <div class="col s4">
+                        <!--<div class="input-field">-->
+                            <label class="label-field" for="title">Nom du projet</label>
+                            <input class="champ" type="text" name="title" id="title">
+                        <!--</div>-->
+                    </div>
+                    <div class="col s4">
+                        <!--<div class="input-field">-->
+                            <p class="center-align"><!--<p class="center-align">Projet urgent?</p>-->
+                                <label class="label-field">Projet urgent?</label>
+                            </p>
+                            <!-- Switch -->
+                            <div class="switch center-align">
+                                <label class="label-field" for="urgent">
+                                    <span class="switch-off">Off</span>
+                                    <input type="checkbox" id="urgent">
+                                    <span class="lever"></span>
+                                    <span class="switch-on">On</span>
+                                </label>
+                            </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="col s4">
+                        <label class="label-field" for="deadline" id="label-deadline">Deadline</label>
+                        <input type="text" class="datepicker champ" name="deadline" id="deadline">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <!--<div class="input-field">-->
+                            <label class="label-field" for="body">Description</label>
+                            <textarea class="champ truncate" name="body" id="body"></textarea>
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div>
+                    <label for="iDTodo"></label>
+                    <input style="display: none" type="text" id="iDTodo">
+                </div>
+                <div>
+                    <label for="check"></label>
+                    <input style="display: none" type="text" id="check">
+                </div>
+                <button id="btnAdd" class="btn-floating btn-large waves-effect waves-light">
+                    <i class="material-icons bg-blue">add</i>
+                </button>
+            </form>
+        </div>
+
+    <hr class="hr-brown">
+
+    <div id="details">
+        <!--<affichage des détails du todo survolé-->
+        <!--<h3>Votre projet en détail</h3>-->
+    </div>
+
+    <h3 class="resultTitle"></h3>
+    <div class="row" id="result">
+        <!--liste des todos-->
+    </div>
+
+</div>
+
+<footer class="page-footer" style="background-color:#5a5050;">
+    <div class="footer-copyright" style="background-color:#5a5050;">
+        <div class="container">
+            © 2017 Sandrine Day
+            <a class="grey-text text-lighten-4 right" href="#">Link1</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
