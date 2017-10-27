@@ -144,11 +144,13 @@ nav, footer {
 }
 
 #details {
-    width: auto;
+    /*width: auto;*/
+    width: 800px;
     height: auto;
-    margin-left: 25%;
+    margin-left: 30%;
     padding: 20px;
-    background: #5a5050;
+    /*background: #5a5050;*/
+    background: rgba(89, 80, 80,0.9);
     color: #e5edc1;
     position: absolute;
     z-index: 999;
